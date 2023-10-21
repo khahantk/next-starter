@@ -6,6 +6,10 @@ export default async function revalidateCache(
 ) {
   res.setHeader('Cache-Control', 'no-cache');
 
+  const token = req.query.xcachekey?.toString();
+  if (!token || token !== process.env.CACHE_INVALIDATION_KEY) {
+    return res.status(401).json({ message: 'Invalid token' });
+  }
   try {
     const { uri } = req.query;
     if (Array.isArray(uri)) {
