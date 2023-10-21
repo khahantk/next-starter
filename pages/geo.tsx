@@ -18,5 +18,9 @@ const GeoLocation: NextPage = () => {
     </div>
   );
 };
-
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
+}
 export default GeoLocation;

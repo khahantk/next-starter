@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
+import type { NextPage } from "next";
+import Link from "next/link";
 
 const Contact: NextPage = () => {
   return (
@@ -16,7 +16,11 @@ const Contact: NextPage = () => {
         </Link>
       </p>
     </div>
-  )
+  );
+};
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
 }
-
-export default Contact
+export default Contact;
