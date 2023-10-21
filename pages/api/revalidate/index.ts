@@ -25,6 +25,6 @@ export default async function revalidateCache(
     }
     return res.json({ revalidated: true, uri });
   } catch (err) {
-    return res.status(500).send('Error revalidating');
+    return res.status(500).send('Error revalidating: ' + (err as Error).message);
   }
 }
