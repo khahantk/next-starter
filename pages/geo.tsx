@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 
-const Home: NextPage = () => {
+const GeoLocation: NextPage = () => {
   return (
     <div>
-      <h1>Index</h1>
+      <h1>GeoLocation</h1>
       <p>
         <Link href="/about" passHref>
           Go to about page
@@ -19,4 +19,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default GeoLocation;
